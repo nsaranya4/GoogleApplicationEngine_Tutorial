@@ -74,6 +74,10 @@ def root():
         user_data=claims, error_message=error_message, times=times)
 # [END gae_python38_auth_verify_token]
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 
 if __name__ == '__main__':
     # This is used when running locally only. When deploying to Google App
